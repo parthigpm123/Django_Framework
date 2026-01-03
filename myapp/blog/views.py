@@ -1,10 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.urls import reverse
 
 # Create your views here.
 
 def index(request):
       return HttpResponse("Welcome to the Blog Index Page")
+#Dynamic URL handling with parameter
+def detail(request, post_id):
+      return HttpResponse(f"You're looking at blog post and ID is:{post_id}")
 
-def detail(request):
-      return HttpResponse("You're looking at blog")
+def old_url_redirect(request, post_id):
+      return redirect('new_url')
+
+def new_url(request):
+      return HttpResponse("This is the new URL page.")
