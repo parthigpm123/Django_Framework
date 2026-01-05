@@ -4,4 +4,4 @@ from django.urls import reverse
 # Create your views here.
 
 def sample_view(request):
-      return HttpResponse("This is a sample view from blog2 app.")
+      return HttpResponse("This is a sample view from blog2 app")
