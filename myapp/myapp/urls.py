@@ -20,6 +20,7 @@ from demo import views
 
 urlpatterns = [
     path("blog/", include('blog.urls')),
+    
     path('admin/', admin.site.urls),
     path('blog2/', include('blog2.urls')),
     path('gm/', views.gm, name='gm'),

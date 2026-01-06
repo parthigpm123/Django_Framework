@@ -5,10 +5,10 @@ from django.urls import reverse
 # Create your views here.
 
 def index(request):
-      return HttpResponse("Welcome to the Blog Index Page")
+      return render(request,'index.html')
 #Dynamic URL handling with parameter
 def detail(request, post_id):
-      return HttpResponse(f"You're looking at blog post and ID is:{post_id}")
+       return render(request,'detail.html')
 
 def old_url_redirect(request, post_id):
       return redirect('new_url')
